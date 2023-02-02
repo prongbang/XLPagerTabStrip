@@ -30,33 +30,38 @@ public struct IndicatorInfo {
     public var image: UIImage?
     public var highlightedImage: UIImage?
     public var accessibilityLabel: String?
+    public var accessibilityId: String?
     public var userInfo: Any?
     
-    public init(title: String?) {
+    public init(title: String?, accessibilityId: String? = nil) {
         self.title = title
         self.accessibilityLabel = title
+        self.accessibilityId = accessibilityId
     }
     
-    public init(image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil) {
+    public init(image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil, accessibilityId: String? = nil) {
         self.image = image
         self.highlightedImage = highlightedImage
         self.userInfo = userInfo
+        self.accessibilityId = accessibilityId
     }
     
-    public init(title: String?, image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil) {
+    public init(title: String?, image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil, accessibilityId: String? = nil) {
         self.title = title
         self.accessibilityLabel = title
         self.image = image
         self.highlightedImage = highlightedImage
         self.userInfo = userInfo
+        self.accessibilityId = accessibilityId
     }
     
-    public init(title: String?, accessibilityLabel:String?, image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil) {
+    public init(title: String?, accessibilityLabel:String?, image: UIImage?, highlightedImage: UIImage? = nil, userInfo: Any? = nil, accessibilityId: String? = nil) {
         self.title = title
         self.accessibilityLabel = accessibilityLabel
         self.image = image
         self.highlightedImage = highlightedImage
         self.userInfo = userInfo
+        self.accessibilityId = accessibilityId
     }
 
 }
