@@ -28,6 +28,7 @@ import Foundation
 open class ButtonBarViewCell: UICollectionViewCell {
 
     @IBOutlet open var imageView: UIImageView!
+    @IBOutlet open var badgeView: UIView!
     @IBOutlet open var label: UILabel!
 
     public required init?(coder aDecoder: NSCoder) {
@@ -49,5 +50,11 @@ open class ButtonBarViewCell: UICollectionViewCell {
                 accessibilityTraits.remove(.selected)
             }
         }
+    }
+    
+    public func setupBadgeView(color: UIColor?, isHidden: Bool) {
+        badgeView.backgroundColor = color
+        badgeView.layer.cornerRadius = badgeView.frame.height / 2
+        badgeView.isHidden = isHidden
     }
 }
