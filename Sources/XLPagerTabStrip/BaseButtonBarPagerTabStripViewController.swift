@@ -355,5 +355,6 @@ open class ExampleBaseButtonBarPagerTabStripViewController: BaseButtonBarPagerTa
         if let highlightedImage = indicatorInfo.highlightedImage {
             cell.imageView.highlightedImage = highlightedImage
         }
+        cell.setupBadgeView(color: indicatorInfo.badgeColor, isHidden: !(indicatorInfo.enableBadge ?? false))
     }
 }
