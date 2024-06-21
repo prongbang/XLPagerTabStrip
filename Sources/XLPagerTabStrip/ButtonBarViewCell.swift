@@ -52,9 +52,10 @@ open class ButtonBarViewCell: UICollectionViewCell {
         }
     }
     
-    public func setupBadgeView(color: UIColor?, isHidden: Bool) {
+    public func setupBadgeView(color: UIColor?, isHidden: Bool, accessibilityId: String?) {
         badgeView.backgroundColor = color
         badgeView.layer.cornerRadius = badgeView.frame.height / 2
         badgeView.isHidden = isHidden
+        badgeView.accessibilityIdentifier = accessibilityId
     }
 }
