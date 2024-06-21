@@ -33,26 +33,46 @@ public struct IndicatorInfo {
     public var enableBadge: Bool = false
     public var accessibilityLabel: String?
     public var accessibilityId: String?
+    public var accessibilityBadgeId: String?
     public var userInfo: Any?
     
-    public init(title: String?, badgeColor: UIColor? = nil, enableBadge: Bool = false, accessibilityId: String? = nil) {
+    public init(title: String?,
+                badgeColor: UIColor? = nil,
+                enableBadge: Bool = false,
+                accessibilityId: String? = nil,
+                accessibilityBadgeId: String? = nil) {
         self.title = title
         self.badgeColor = badgeColor
         self.enableBadge = enableBadge
         self.accessibilityLabel = title
         self.accessibilityId = accessibilityId
+        self.accessibilityBadgeId = accessibilityBadgeId
     }
     
-    public init(image: UIImage?, highlightedImage: UIImage? = nil, badgeColor: UIColor? = nil, enableBadge: Bool = false, userInfo: Any? = nil, accessibilityId: String? = nil) {
+    public init(image: UIImage?, 
+                highlightedImage: UIImage? = nil,
+                badgeColor: UIColor? = nil,
+                enableBadge: Bool = false,
+                userInfo: Any? = nil,
+                accessibilityId: String? = nil,
+                accessibilityBadgeId: String? = nil) {
         self.image = image
         self.highlightedImage = highlightedImage
         self.badgeColor = badgeColor
         self.enableBadge = enableBadge
         self.userInfo = userInfo
         self.accessibilityId = accessibilityId
+        self.accessibilityBadgeId = accessibilityBadgeId
     }
     
-    public init(title: String?, image: UIImage?, highlightedImage: UIImage? = nil, badgeColor: UIColor? = nil, enableBadge: Bool = false, userInfo: Any? = nil, accessibilityId: String? = nil) {
+    public init(title: String?, 
+                image: UIImage?,
+                highlightedImage: UIImage? = nil,
+                badgeColor: UIColor? = nil,
+                enableBadge: Bool = false,
+                userInfo: Any? = nil,
+                accessibilityId: String? = nil,
+                accessibilityBadgeId: String? = nil) {
         self.title = title
         self.accessibilityLabel = title
         self.image = image
@@ -61,9 +81,18 @@ public struct IndicatorInfo {
         self.enableBadge = enableBadge
         self.userInfo = userInfo
         self.accessibilityId = accessibilityId
+        self.accessibilityBadgeId = accessibilityBadgeId
     }
     
-    public init(title: String?, accessibilityLabel:String?, image: UIImage?, highlightedImage: UIImage? = nil, badgeColor: UIColor? = nil, enableBadge: Bool = false, userInfo: Any? = nil, accessibilityId: String? = nil) {
+    public init(title: String?,
+                accessibilityLabel: String?,
+                image: UIImage?, 
+                highlightedImage: UIImage? = nil,
+                badgeColor: UIColor? = nil, 
+                enableBadge: Bool = false,
+                userInfo: Any? = nil,
+                accessibilityId: String? = nil,
+                accessibilityBadgeId: String? = nil) {
         self.title = title
         self.accessibilityLabel = accessibilityLabel
         self.image = image
@@ -72,6 +101,7 @@ public struct IndicatorInfo {
         self.enableBadge = enableBadge
         self.userInfo = userInfo
         self.accessibilityId = accessibilityId
+        self.accessibilityBadgeId = accessibilityBadgeId
     }
 
 }
