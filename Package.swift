@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "XLPagerTabStripSPM",
+    name: "XLPagerTabStrip",
     platforms: [
         .iOS(.v11)
     ],
