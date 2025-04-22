@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,9 +19,9 @@
 		285DA2951C5A6A00000908CA /* YoutubeIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285DA2941C5A6A00000908CA /* YoutubeIconCell.swift */; };
 		285DA2971C5A6A36000908CA /* YoutubeIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 285DA2961C5A6A36000908CA /* YoutubeIconCell.xib */; };
 		287D0A721C4B7877004566D6 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D0A711C4B7877004566D6 /* ExampleUITests.swift */; };
-		287D0A7D1C4B7B55004566D6 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287D0A7A1C4B7B26004566D6 /* XLPagerTabStrip.framework */; };
-		287D0A7E1C4B7B55004566D6 /* XLPagerTabStrip.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 287D0A7A1C4B7B26004566D6 /* XLPagerTabStrip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28F828D01C4B714D00330CF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F828CF1C4B714D00330CF4 /* AppDelegate.swift */; };
+		3418DA3C2DB7883D00D407C7 /* XLPagerTabStrip in Frameworks */ = {isa = PBXBuildFile; productRef = 3418DA3B2DB7883D00D407C7 /* XLPagerTabStrip */; };
+		3418DA3F2DB78A9300D407C7 /* XLPagerTabStrip in Frameworks */ = {isa = PBXBuildFile; productRef = 3418DA3E2DB78A9300D407C7 /* XLPagerTabStrip */; };
 		CB2125DE1C52A80E002DAF42 /* TwitterExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2125DD1C52A80E002DAF42 /* TwitterExampleViewController.swift */; };
 		CB3697BF1C5177B4001FC5F8 /* ButtonBarExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3697BE1C5177B4001FC5F8 /* ButtonBarExampleViewController.swift */; };
 		CB71C6EB1C4EB964008EC806 /* SegmentedExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB71C6EA1C4EB964008EC806 /* SegmentedExampleViewController.swift */; };
@@ -50,13 +50,6 @@
 			remoteGlobalIDString = 28F828871C494B2C00330CF4;
 			remoteInfo = XLPagerTabStripTests;
 		};
-		287D0A7F1C4B7B55004566D6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 287D0A741C4B7B26004566D6 /* XLPagerTabStrip.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 28F8287C1C494B2C00330CF4;
-			remoteInfo = XLPagerTabStrip;
-		};
 		28F828E11C4B714D00330CF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28F828C41C4B714D00330CF4 /* Project object */;
@@ -65,20 +58,6 @@
 			remoteInfo = Example;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		287D0A811C4B7B55004566D6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				287D0A7E1C4B7B55004566D6 /* XLPagerTabStrip.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F081A9B1FDABD1400B881EB /* YoutubeIconWithLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeIconWithLabelCell.swift; sourceTree = "<group>"; };
@@ -117,7 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				287D0A7D1C4B7B55004566D6 /* XLPagerTabStrip.framework in Frameworks */,
+				3418DA3C2DB7883D00D407C7 /* XLPagerTabStrip in Frameworks */,
+				3418DA3F2DB78A9300D407C7 /* XLPagerTabStrip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,12 +257,10 @@
 				28F828C81C4B714D00330CF4 /* Sources */,
 				28F828C91C4B714D00330CF4 /* Frameworks */,
 				28F828CA1C4B714D00330CF4 /* Resources */,
-				287D0A811C4B7B55004566D6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				287D0A801C4B7B55004566D6 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -336,6 +314,9 @@
 				Base,
 			);
 			mainGroup = 28F828C31C4B714D00330CF4;
+			packageReferences = (
+				3418DA3D2DB78A9300D407C7 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */,
+			);
 			productRefGroup = 28F828CD1C4B714D00330CF4 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -428,11 +409,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		287D0A801C4B7B55004566D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = XLPagerTabStrip;
-			targetProxy = 287D0A7F1C4B7B55004566D6 /* PBXContainerItemProxy */;
-		};
 		28F828E21C4B714D00330CF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 28F828CB1C4B714D00330CF4 /* Example */;
@@ -551,7 +527,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -559,12 +536,14 @@
 		28F828EA1C4B714D00330CF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -576,12 +555,14 @@
 		28F828EB1C4B714D00330CF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -594,7 +575,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Example/ExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.ExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -609,7 +594,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Example/ExampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.ExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -649,6 +638,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3418DA3D2DB78A9300D407C7 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/prongbang/XLPagerTabStrip.git";
+			requirement = {
+				branch = "improve/support-spm";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3418DA3B2DB7883D00D407C7 /* XLPagerTabStrip */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = XLPagerTabStrip;
+		};
+		3418DA3E2DB78A9300D407C7 /* XLPagerTabStrip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3418DA3D2DB78A9300D407C7 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */;
+			productName = XLPagerTabStrip;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 28F828C41C4B714D00330CF4 /* Project object */;
 }

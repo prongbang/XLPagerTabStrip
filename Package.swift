@@ -4,28 +4,30 @@
 import PackageDescription
 
 let package = Package(
-    name: "XLPagerTabStrip",
+    name: "XLPagerTabStripSPM",
     platforms: [
-            .iOS(.v11)
-        ],
+        .iOS(.v11)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "XLPagerTabStrip",
-            targets: ["XLPagerTabStrip"]),
+            targets: ["XLPagerTabStrip"]
+        ),
     ],
     dependencies: [
         .package(
-                    url: "https://github.com/nicklockwood/FXPageControl.git",
-                    .upToNextMajor(from: "1.6.0")
-                )
+            url: "https://github.com/nicklockwood/FXPageControl.git",
+            .upToNextMajor(from: "1.6.0")
+        ),
     ],
     targets: [
         .target(
             name: "XLPagerTabStrip",
-            dependencies: ["FXPageControl"]),
+            dependencies: ["FXPageControl"]
+        ),
     ],
     swiftLanguageVersions: [
-           .v5
-       ]
+        .v5
+    ]
 )
