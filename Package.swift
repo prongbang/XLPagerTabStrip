@@ -1,31 +1,20 @@
-// swift-tools-version: 5.4
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version:5.7
 import PackageDescription
-
 let package = Package(
     name: "XLPagerTabStrip",
-    platforms: [
-            .iOS(.v11)
-        ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "XLPagerTabStrip",
-            targets: ["XLPagerTabStrip"]),
-    ],
+            targets: ["XLPagerTabStrip"]
+        ),
+    ],    
     dependencies: [
-        .package(
-                    url: "https://github.com/nicklockwood/FXPageControl.git",
-                    .upToNextMajor(from: "1.6.0")
-                )
     ],
     targets: [
-        .target(
+        .binaryTarget(
             name: "XLPagerTabStrip",
-            dependencies: ["FXPageControl"]),
-    ],
-    swiftLanguageVersions: [
-           .v5
-       ]
+            url: "https://github.com/prongbang/cocoapods-to-xcframework/releases/download/9.0.0/XLPagerTabStrip.xcframework.zip",
+            checksum: "a4c509eb756cd36ea2ab2ce1e5723e4ebbba41884cce03549b5ecf957b6d97c4"
+        )
+    ]
 )
